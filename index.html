@@ -1,32 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício HTML</title>
+    <title>Meu portal de notícias</title>
+    <link rel="stylesheet" href="./main.css" />
 </head>
 
 <body>
-    <main>
-        <h1>Formulário de cadastro</h1>
-
-        <form action="post">
-            <div>
-                <label for="nome">Nome</label>
-                <input type="text" id="nome" required>
+    <header>
+        <div class="container">
+            <h1>Meu portal de notícias</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#sports" title="Ir para a seção de esportes">Esportes</a>
+                    </li>
+                    <li>
+                        <a href="#economy" title="Ir para a seção de notícias">Economia</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="sports">
+        <div class="container">
+            <h2>Esportes</h2>
+            <div class="articles">
+                <article>
+                    <img src="./imagens/futebol.jpg" alt="Bola de futebol no gramado" />
+                    <header>
+                        <time>13/07/2022 às 12:35</time>
+                    </header>
+                    <h3>Grande clássico na noite de hoje</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+                <article>
+                    <img src="./imagens/futebol-americano.jpg"
+                        alt="Jogador de futebol americano correndo com a bola na mão" />
+                    <header>
+                        <time>13/07/2022 às 12:35</time>
+                    </header>
+                    <h3>Noite do Superbowl</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+                <article>
+                    <img src="./imagens/basquete.jpg" title="Vista aérea de uma quadra de basquete" />
+                    <header>
+                        <time>13/07/2022 às 12:35</time>
+                    </header>
+                    <h3>Notícia sobre a NBA</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+                <article>
+                    <img src="./imagens/basquete.jpg" title="Vista aérea de uma quadra de basquete" />
+                    <header>
+                        <time>13/07/2022 às 12:35</time>
+                    </header>
+                    <h3>Notícia sobre a NBA</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
             </div>
-            <div>
-                <label for="email">E-mail</label>
-                <input type="email" id="email" required>
+        </div>
+    </section>
+    <section id="economy">
+        <div class="container">
+            <h2>Economia</h2>
+            <div class="articles">
+                <article>
+                    <img src="./imagens/dolares.jpg" alt="Muitos dólares" />
+                    <header>
+                        <time>13/07/2022 às 12:35</time>
+                    </header>
+                    <h3>Dólar em alta de 0.50%</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+                <article>
+                    <img src="./imagens/euro.jpg" alt="Várias notas de euro" />
+                    <header>
+                        <time>13/07/2022 às 12:35</time>
+                    </header>
+                    <h3>Euro em queda de 0.40%</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+                <article>
+                    <img src="./imagens/petroleo.jpg" alt="Extração de petróleo" />
+                    <header>
+                        <time>13/07/2022 às 12:35</time>
+                    </header>
+                    <h3>Alta no preço do barril do petróleo</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
             </div>
-            <div>
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" required>
+        </div>
+    </section>
+    <section id="entertainment">
+        <div class="container">
+            <h2>Entretenimento</h2>
+            <div class="articles">
+                <article>
+                    <img src="https://t.ctcdn.com.br/gjQln1ilOjgH-lo_aryZm9T3Y_I=/1024x576/smart/i829297.jpeg" alt="Muitos dólares" />
+                    <header>
+                        <time>20/02/2024 às 10:15</time>
+                    </header>
+                    <h3>Berlim | O que esperar da segunda temporada da série?</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+                <article>
+                    <img src="https://t.ctcdn.com.br/bMC7BNjtKhMCtix8gGDAPDaD5N8=/1024x576/smart/i832577.jpeg" alt="Várias notas de euro" />
+                    <header>
+                        <time>19/02/2024 às 12:35</time>
+                    </header>
+                    <h3>Crítica True Detective Temporada 4 | A longa noite é fria e impiedosa</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+                <article>
+                    <img src="https://t.ctcdn.com.br/PIzyJHxWMpELgBmUmJQqN-gJpwA=/1024x576/smart/i722746.jpeg" alt="Extração de petróleo" />
+                    <header>
+                        <time>19/02/2024 às 11:11</time>
+                    </header>
+                    <h3>Filme de The Mandalorian deve ter orçamento menor que o da série</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
             </div>
-            <button type="submit">Cadastrar</button>
-        </form>
-    </main>
+        </div>
+    </section>
+    <section id="tech">
+        <div class="container">
+            <h2>Tecnologia</h2>
+            <div class="articles">
+                <article>
+                    <img src="https://s2-g1.glbimg.com/O80yfW-NyezALuDMwkglqvV8Czc=/0x0:4000x2780/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2023/R/7/N3mCt7ScmsslZT2ljGew/logotipo-da-neuralink-e-elon-musk.jpg" alt="Muitos dólares" />
+                    <header>
+                        <time>20/02/2024 às 12:35</time>
+                    </header>
+                    <h3>Paciente que recebeu chip cerebral da Neuralink controlou mouse com pensamento, diz Musk</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+                <article>
+                    <img src="https://s2-g1.glbimg.com/E-hNUQ_JKuvcQVdF6VULQpNA2TM=/0x0:640x360/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/H/9/YWcLRKRXSecdapH51K0A/tec-bbc-1.jpg" alt="Várias notas de euro" />
+                    <header>
+                        <time>17/02/2024 às 12:35</time>
+                    </header>
+                    <h3>Por que empregos nas gigantes de tecnologia perderam o encanto</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+                <article>
+                    <img src="https://s2-g1.glbimg.com/qATb0QLiY9ZuI0I8OJtwy3tSmPo=/0x0:3092x2121/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2024/T/0/OyMg4MTHu3GmCsqEYZqA/2024-02-15t063129z-1112942135-rc2u26a4r3kd-rtrmadp-3-space-exploration-moon.jpg" alt="Extração de petróleo" />
+                    <header>
+                        <time>15/02/2024 às 12:35</time>
+                    </header>
+                    <h3>Com apoio da Nasa, SpaceX lança sonda lunar de empresa privada</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur consequuntur doloremque totam
+                        labore architecto. Corporis adipisci optio placeat quibusdam totam iure veritatis quam, ullam
+                        tenetur error? Laborum, modi itaque. Sunt.
+                    </p>
+                    <a href="#" title="Leia a notícia completa">Ler mais</a>
+                </article>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>
