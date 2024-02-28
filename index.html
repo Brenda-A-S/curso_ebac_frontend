@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>B maior que A?</h1>
+    <form action="">
+        <input type="number" name="" id="campo_B" placeholder="B">
+        <input type="number" name="" id="campo_A" placeholder="A">
+        <button type="submit">Verificar</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        const campoA = document.querySelector('#campo_A');
+        const campoB = document.querySelector('#campo_B');
+
+        form.addEventListener('submit', function(e){
+            if(campoA.value < campoB.value ){
+                alert('Positivo')
+            }else {
+                alert('Negativo')
+            }
+        })
+        
+    </script>
+</body>
+</html>
