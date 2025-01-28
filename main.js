@@ -10,27 +10,22 @@ $(document).ready(function () {
         botao.find('i').removeClass('d-none');
         botao.find('span').addClass('d-none');
 
-        fetch(endpoint)
-            .then(function (resposta) {
-                if (!resposta.ok) {
-                    throw new Error('CEP inválido ou não encontrado.');
-                }
-                return resposta.json();
-            })
-            .then(function (json) {
-                if (json.erro) {
-                    throw new Error('CEP não encontrado.');
-                }
-                const endereco = `${json.logradouro}, ${json.bairro} - ${json.localidade} / ${json.uf}`;
-                $('#endereco').val(endereco);
-            })
-            .catch(function (erro) {
-                alert(erro.message);
-            })
-            .finally(function () {
-                botao.find('i').addClass('d-none');
-                botao.find('span').removeClass('d-none');
-            });
+        $.ajax({
+            url: endpoint,
+            method: 'GET',
+            dataType: 'json'
+        })
+        .done(function(resposta) {
+            const logradouro = resposta.logradouro;
+            const bairro = resposta.bairro;
+            const cidade = resposta.localidade;
+            const estado = resposta.uf;
+            const endereco = `${logradouro}, ${bairro} - ${cidade} / ${estado}`;
+            $('#endereco').val(endereco);
+        })
+        .fail(function() {
+            alert('Erro ao buscar o CEP. Verifique se ele é válido.');
+        });
     });
 
     $('#formulario-cadastro').submit(function (event) {
