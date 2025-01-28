@@ -1,30 +1,34 @@
 $(document).ready(function () {
-
     $('#cep').mask('00000-000');
 
     $('#btn-buscar-cep').click(function () {
         const cep = $('#cep').val();
-        const endpoint = `https://viacep.com.br/ws/${cep}/json/`;
+        const endpoint = `https://viacep.com.br/ws/${cep}/json`;
         const botao = $(this);
 
-        botao.find('i').removeClass('d-none');
-        botao.find('span').addClass('d-none');
+        botao.find('i').addClass('d-none');
+        botao.find('span').removeClass('d-none');
 
-        $.ajax({
-            url: endpoint,
-            method: 'GET',
-            dataType: 'json'
-        })
-        .done(function(resposta) {
-            const logradouro = resposta.logradouro;
-            const bairro = resposta.bairro;
-            const cidade = resposta.localidade;
-            const estado = resposta.uf;
+        $.ajax(endpoint).done(function (resposta) {
+            if (resposta.erro) {
+                alert('CEP não encontrado.');
+                return;
+            }
+
+            const logradouro = resposta.logradouro || '';
+            const bairro = resposta.bairro || '';
+            const cidade = resposta.localidade || '';
+            const estado = resposta.uf || '';
+
             const endereco = `${logradouro}, ${bairro} - ${cidade} / ${estado}`;
             $('#endereco').val(endereco);
         })
-        .fail(function() {
-            alert('Erro ao buscar o CEP. Verifique se ele é válido.');
+        .catch(function () {
+            alert('Erro ao buscar o CEP. Verifique a conexão ou o CEP digitado.');
+        })
+        .finally(function () {
+            botao.find('i').removeClass('d-none');
+            botao.find('span').addClass('d-none');
         });
     });
 
@@ -62,7 +66,7 @@ $(document).ready(function () {
             $('#erro-cep').addClass('d-none');
         }
 
-         if ($('#numero').val().trim().length === 0) {
+        if ($('#numero').val().trim().length === 0) {
             $('#erro-numero').removeClass('d-none');
             valido = false;
         } else {
