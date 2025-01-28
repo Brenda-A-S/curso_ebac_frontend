@@ -50,7 +50,3 @@ const camiseta = new Vestuario("Camiseta Polo", 79.90, "M", "Azul");
 console.log(celular.exibirInfo());
 console.log(chocolate.exibirInfo());
 console.log(camiseta.exibirInfo());
-
-const erro =new Error()
-
-console.log(typeof erro)
